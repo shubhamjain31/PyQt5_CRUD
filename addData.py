@@ -85,7 +85,7 @@ class addWindow(QDialog):
             conn.execute("insert into employee (name, course, country, age) values (?, ?, ?, ?)",
             (name, course, country, age))
             conn.commit()
-            QMessageBox.about(self, 'Connection', 'Database Connected !')
+            QMessageBox.about(self, 'Connection', 'Record created successfully !')
             conn.close()
         except Exception as e:
             print(e)
