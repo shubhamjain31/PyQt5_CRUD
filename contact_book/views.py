@@ -11,6 +11,8 @@ from PyQt5.QtWidgets import (
 class Window(QMainWindow):
     """Main Window."""
     def __init__(self, parent=None):
+        super(Window, self).__init__()
+
         """Initializer."""
         # Snip...
 
@@ -35,7 +37,7 @@ class Window(QMainWindow):
         layout.addWidget(self.addButton)
         layout.addWidget(self.deleteButton)
         layout.addStretch()
-        
+
         layout.addWidget(self.clearAllButton)
-        self.layout.addWidget(self.table)
-        self.layout.addLayout(layout)
+        layout.addWidget(self.table)
+        self.l.addLayout(layout)
