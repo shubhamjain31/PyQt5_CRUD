@@ -1,8 +1,8 @@
 import sys
 from PyQt5.QtWidgets import QApplication
 
-from views import Window
-from database import createConnection
+from contact_book.views import Window
+from contact_book.database import createConnection
 
 def main():
 
