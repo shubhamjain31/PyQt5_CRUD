@@ -6,14 +6,14 @@
 
 `rpcontacts_project/
 │
-├── contact_book/
-│   ├── __init__.py
-│   ├── views.py
-│   ├── database.py
-│   ├── main.py
-|   ├── test.py
-│   └── model.py
-│
-├── requirements.txt
-├── README.md
-└── contacts.py`
+├── contact_book/  
+│   ├── __init__.py  
+│   ├── views.py  
+│   ├── database.py  
+│   ├── main.py  
+|   ├── test.py  
+│   └── model.py  
+│  
+├── requirements.txt  
+├── README.md  
+└── contacts.py  `
