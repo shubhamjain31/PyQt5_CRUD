@@ -4,7 +4,6 @@
 
 ### Project Overview  
 
-`
 contact_book_project/   <br />
 │   <br />
 ├── contact_book/   <br />
@@ -18,4 +17,3 @@ contact_book_project/   <br />
 ├── requirements.txt   <br />
 ├── README.md   <br />
 └── contacts.py   <br />
-`
