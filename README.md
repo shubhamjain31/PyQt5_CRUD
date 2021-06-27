@@ -4,16 +4,18 @@
 
 ### Project Overview  
 
-`rpcontacts_project/
-│
-├── contact_book/  
-│   ├── __init__.py  
-│   ├── views.py  
-│   ├── database.py  
-│   ├── main.py  
-|   ├── test.py  
-│   └── model.py  
-│  
-├── requirements.txt  
-├── README.md  
-└── contacts.py  `
+`
+contact_book_project/   <br />
+│   <br />
+├── contact_book/   <br />
+│   ├── __init__.py   <br />
+│   ├── views.py   <br />
+│   ├── database.py   <br />
+│   ├── main.py   <br />
+|   ├── test.py   <br />
+│   └── model.py   <br />
+│   <br />
+├── requirements.txt   <br />
+├── README.md   <br />
+└── contacts.py   <br />
+`
