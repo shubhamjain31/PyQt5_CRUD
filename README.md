@@ -20,4 +20,13 @@ Here, you can see the data in table.
 ![DISPLAY](https://github.com/shubhamjain31/PyQt5_CRUD/blob/main/Screenshots/display.jpg)  
 
 And here, you can add data.  
-![DISPLAY](https://github.com/shubhamjain31/PyQt5_CRUD/blob/main/Screenshots/add.jpg) 
+![DISPLAY](https://github.com/shubhamjain31/PyQt5_CRUD/blob/main/Screenshots/add.jpg)   
+
+# Running the Application:
+To run Contact Book, you need to download the source code. Then open a terminal or command-line window and run the following steps:
+
+1) Install the dependencies  
+`python install -r requirements.txt`  
+
+2) Run the application  
+`python contacts.py`
