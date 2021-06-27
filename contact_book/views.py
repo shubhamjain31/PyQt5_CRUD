@@ -27,7 +27,13 @@ class Window(QMainWindow):
         """Initializer."""
         super().__init__(parent)
         self.setWindowTitle("Contact Book")
-        self.resize(550, 250)
+        # self.resize(550, 250)
+
+        # setting  the fixed size of window
+        self.setFixedSize(550, 500)
+
+        # setting geometry to the window(left, top, width, height)
+        self.setGeometry(700, 300, 550, 500)
 
         self.centralWidget = QWidget()
         self.setCentralWidget(self.centralWidget)
