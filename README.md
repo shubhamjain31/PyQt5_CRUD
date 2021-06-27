@@ -14,4 +14,8 @@
 
 # Screenshots:  
 
-![DISPLAY](https://github.com/shubhamjain31/PyQt5_CRUD/blob/main/Screenshots/display.jpg) 
+Here, you can see the data in table.
+![DISPLAY](https://github.com/shubhamjain31/PyQt5_CRUD/blob/main/Screenshots/display.jpg)  
+
+And here, you can add data.
+![DISPLAY](https://github.com/shubhamjain31/PyQt5_CRUD/blob/main/Screenshots/add.jpg) 
