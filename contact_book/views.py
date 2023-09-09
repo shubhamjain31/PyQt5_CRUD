@@ -1,7 +1,7 @@
 """This module provides views to manage the contacts table."""
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import (
     QAbstractItemView,
     QDialog,
     QDialogButtonBox,
@@ -50,7 +50,7 @@ class Window(QMainWindow):
         # Create the table view widget
         self.table = QTableView()
         self.table.setModel(self.contactsModel.model)
-        self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.table.resizeColumnsToContents()
 
         # Create buttons
@@ -75,8 +75,8 @@ class Window(QMainWindow):
 
         """Open the Add Contact dialog."""
         dialog = AddDialog(self)
-
-        if dialog.exec() == QDialog.Accepted:
+        if dialog.exec() == 1:
+        #if dialog.exec() == QDialog.Accepted:
             self.contactsModel.addContact(dialog.data)
             self.table.resizeColumnsToContents()
 
@@ -91,10 +91,10 @@ class Window(QMainWindow):
             self,
             "Warning!",
             "Do you want to remove the selected contact?",
-            QMessageBox.Ok | QMessageBox.Cancel,
+            QMessageBox.StandardButton.Ok | QMessageBox.StandardButton.Cancel,
         )
 
-        if messageBox == QMessageBox.Ok:
+        if messageBox == QMessageBox.StandardButton.Ok:
             self.contactsModel.deleteContact(row)
 
     def clearContacts(self):
@@ -145,10 +145,10 @@ class AddDialog(QDialog):
 
         # Add standard buttons to the dialog and connect them
         self.buttonsBox = QDialogButtonBox(self)
-        self.buttonsBox.setOrientation(Qt.Horizontal)
-        self.buttonsBox.setStandardButtons(
-            QDialogButtonBox.Ok | QDialogButtonBox.Cancel
-        )
+        self.buttonsBox.setOrientation(Qt.Orientation.Horizontal)
+        self.buttonsBox.setStandardButtons(QDialogButtonBox.StandardButton.Ok|
+                               QDialogButtonBox.StandardButton.Cancel)
+        
         self.buttonsBox.accepted.connect(self.accept)
         self.buttonsBox.rejected.connect(self.reject)
         self.layout.addWidget(self.buttonsBox)
