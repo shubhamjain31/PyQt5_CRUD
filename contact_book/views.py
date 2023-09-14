@@ -39,8 +39,8 @@ class Window(QMainWindow):
         self.setCentralWidget(self.centralWidget)
         self.layout = QHBoxLayout()
         self.centralWidget.setLayout(self.layout)
-
-        self.contactsModel = ContactsModel()
+        headers = ("ID", "Name", "Job", "Email")
+        self.contactsModel = ContactsModel("contacts",headers)
         self.setupUI()
 
     def setupUI(self):
