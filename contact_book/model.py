@@ -1,26 +1,28 @@
 """This module provides a model to manage the contacts table."""
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtSql import QSqlTableModel
+from PyQt6.QtCore import Qt
+from PyQt6.QtSql import QSqlTableModel
 
 
 class ContactsModel:
-    def __init__(self):
-        self.model = self._createModel()
-
+    def __init__(self,tablename,*columnsname):
+        self.model = self._createModel(self,tablename,columnsname)
+        
     @staticmethod
-    def _createModel():
+    def _createModel(self,tablename,*columnsname):
 
         """Create and set up the model."""
         tableModel = QSqlTableModel()
-        tableModel.setTable("contacts")
-        tableModel.setEditStrategy(QSqlTableModel.OnFieldChange)
+        #tableModel.setTable("contacts")
+        tableModel.setTable(tablename)
+        tableModel.setEditStrategy(QSqlTableModel.EditStrategy.OnFieldChange)
         tableModel.select()
 
-        headers = ("ID", "Name", "Job", "Email")
+        #headers = ("ID", "Name", "Job", "Email")
+        headers = columnsname
         for columnIndex, header in enumerate(headers):
             
-            tableModel.setHeaderData(columnIndex, Qt.Horizontal, header)
+            tableModel.setHeaderData(columnIndex, Qt.Orientation.Horizontal, header)
         return tableModel
 
     def addContact(self, data):

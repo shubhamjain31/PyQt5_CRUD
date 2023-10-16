@@ -13,7 +13,6 @@
 2) PyQt5 For GUI  
 3) SqLite3 For Database  
 
-
 # Screenshots:  
 
 Here, you can see the data in table.  
@@ -30,3 +29,4 @@ To run Contact Book, you need to download the source code. Then open a terminal 
 
 2) Run the application  
 `python contacts.py`
+source activate andalosy_djngkv
